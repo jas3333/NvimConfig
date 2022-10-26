@@ -62,6 +62,11 @@ lspconfig["html"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["pyright"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure typescript server with plugin
 typescript.setup({
 	server = {
@@ -78,8 +83,8 @@ lspconfig["cssls"].setup({
 
 -- configure tailwindcss server
 lspconfig["tailwindcss"].setup({
-	capabilities = capabilities,  -- Will allow autocompletion
-	on_attach = on_attach,        -- Will attach to the file so we can use keybinds
+	capabilities = capabilities, -- Will allow autocompletion
+	on_attach = on_attach, -- Will attach to the file so we can use keybinds
 })
 
 -- configure lua server (with special settings)
