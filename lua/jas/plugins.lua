@@ -85,6 +85,7 @@ return packer.startup(function(use)
 
 	-- Treesitter
 	use("nvim-treesitter/nvim-treesitter")
+	use("andymass/vim-matchup")
 
 	-- Color Themes
 	use("sainnhe/everforest")
@@ -107,6 +108,8 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
 
+	-- Indent Line
+	use("lukas-reineke/indent-blankline.nvim")
 	-- Misc
 	use("LudoPinelli/comment-box.nvim")
 	use("KabbAmine/vCoolor.vim")

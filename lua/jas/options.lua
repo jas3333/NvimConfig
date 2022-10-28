@@ -25,7 +25,7 @@ vim.opt.clipboard:append("unnamedplus")
 
 -- Appearance
 vim.opt.termguicolors = true
---vim.opt.showtabline = 2
+vim.opt.showtabline = 2
 
 -- Keywords
 vim.opt.iskeyword:append("-")
