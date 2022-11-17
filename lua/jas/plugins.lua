@@ -110,6 +110,7 @@ return packer.startup(function(use)
 
 	-- Indent Line
 	use("lukas-reineke/indent-blankline.nvim")
+
 	-- Misc
 	use("LudoPinelli/comment-box.nvim")
 	use("KabbAmine/vCoolor.vim")

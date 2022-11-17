@@ -45,9 +45,9 @@ keymap("i", "jj", "<ESC>", options)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", options)
 
 -- Telescope
-keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", options) -- find files within current working directory, respects .gitignore
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", options) -- find files within current working directory
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", options) -- find string in current working directory as you type
-keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", options) -- find string under cursor in current working directory
+--keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", options) -- find string under cursor in current working directory
 
 -- Comment Box
 keymap("n", "<leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", options)
