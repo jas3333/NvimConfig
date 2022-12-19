@@ -19,7 +19,11 @@ null_ls.setup({
 			},
 		}),
 		formatting.stylua,
-		diagnostics.eslint_d,
+		diagnostics.eslint_d.with({
+			condition = function(utils)
+				return utils.root_has_file(".eslintrc.json")
+			end,
+		}),
 	},
 
 	-- Configure format on save

@@ -45,6 +45,9 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("kyazdani42/nvim-web-devicons")
 
+	-- Copilot?
+	-- use("github/copilot.vim")
+
 	-- Lualine
 	use({
 		"nvim-lualine/lualine.nvim",

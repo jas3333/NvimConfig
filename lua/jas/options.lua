@@ -10,6 +10,12 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
+-- Format options
+vim.api.nvim_create_autocmd("BufEnter", {
+	callback = function()
+		vim.opt.formatoptions = vim.opt.formatoptions - { "c", "r", "o" }
+	end,
+})
 -- Line wrapping
 vim.opt.wrap = false
 

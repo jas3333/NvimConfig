@@ -43,7 +43,20 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 		["<C-e>"] = cmp.mapping.abort(), -- close completion window
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
-
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif require("luasnip").expand_or_jumpable() then
+				vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
+			elseif vim.b._copilot_suggestion ~= nil then
+				vim.fn.feedkeys(vim.api.nvim_replace_termcodes(vim.fn["copilot#Accept"](), true, true, true), "")
+			else
+				fallback()
+			end
+		end, {
+			"i",
+			"s",
+		}),
 		-- super tab functionality (not in youtube nvim video)
 		["<Tab>"] = cmp.mapping(function(fallback) -- use tab for next suggestion
 			if cmp.visible() then

@@ -34,6 +34,10 @@ keymap("n", "<Space>7", ":BufferGoto 7<CR>", options)
 keymap("n", "<Space>8", ":BufferGoto 8<CR>", options)
 keymap("n", "<Space>9", ":BufferGoto 9<CR>", options)
 
+-- Copilot
+-- vim.cmd([[imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")]])
+-- vim.g.copilot_no_tab_map = true
+
 -- Stay in indent mode
 keymap("v", "<", "<gv", options)
 keymap("v", ">", ">gv", options)
@@ -50,5 +54,5 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", options) -- find string
 --keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", options) -- find string under cursor in current working directory
 
 -- Comment Box
-keymap("n", "<leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", options)
-keymap("v", "<leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", options)
+keymap("n", "<leader>ac", "<cmd>lua require('comment-box').cbox()<CR>", options)
+keymap("v", "<leader>ac", "<cmd>lua require('comment-box').cbox()<CR>", options)
