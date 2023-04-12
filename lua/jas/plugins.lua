@@ -45,7 +45,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("kyazdani42/nvim-web-devicons")
 
-	-- Copilot?
+	-- -- Copilot
 	-- use("github/copilot.vim")
 
 	-- Lualine
@@ -73,7 +73,14 @@ return packer.startup(function(use)
 	-- Config lsp servers
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	-- use({
+	-- 	"glepnir/lspsaga.nvim",
+	-- 	branch = "main",
+	-- 	config = function()
+	-- 		require("lspsaga").setup({})
+	-- 	end,
+	-- })
+	use({ "jas3333/lspsaga.nvim", branch = "main" })
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
@@ -97,6 +104,9 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
+	-- Misc
+	use({ "elkowar/yuck.vim" })
+
 	-- Autopairs
 	use({
 		"windwp/nvim-autopairs",
@@ -106,10 +116,10 @@ return packer.startup(function(use)
 	})
 
 	-- Bufferline
-	use({
-		"romgrk/barbar.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
+	-- use({
+	-- 	"romgrk/barbar.nvim",
+	-- 	requires = { "kyazdani42/nvim-web-devicons" },
+	-- })
 
 	-- Indent Line
 	use("lukas-reineke/indent-blankline.nvim")
@@ -118,6 +128,12 @@ return packer.startup(function(use)
 	use("LudoPinelli/comment-box.nvim")
 	use("KabbAmine/vCoolor.vim")
 	use("norcalli/nvim-colorizer.lua")
+	use({
+		"ellisonleao/glow.nvim",
+		config = function()
+			require("glow").setup()
+		end,
+	})
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

@@ -34,7 +34,7 @@ keymap("n", "<Space>7", ":BufferGoto 7<CR>", options)
 keymap("n", "<Space>8", ":BufferGoto 8<CR>", options)
 keymap("n", "<Space>9", ":BufferGoto 9<CR>", options)
 
--- Copilot
+-- --Copilot
 -- vim.cmd([[imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")]])
 -- vim.g.copilot_no_tab_map = true
 
@@ -44,6 +44,7 @@ keymap("v", ">", ">gv", options)
 
 -- Quick escape from insert mode
 keymap("i", "jj", "<ESC>", options)
+keymap("t", "jj", "<C-\\><C-N>", term_options)
 
 -- Nvim-Tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", options)
@@ -56,3 +57,5 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", options) -- find string
 -- Comment Box
 keymap("n", "<leader>ac", "<cmd>lua require('comment-box').cbox()<CR>", options)
 keymap("v", "<leader>ac", "<cmd>lua require('comment-box').cbox()<CR>", options)
+
+-- Terminal
