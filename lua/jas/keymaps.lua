@@ -34,6 +34,8 @@ keymap("n", "<Space>7", ":BufferGoto 7<CR>", options)
 keymap("n", "<Space>8", ":BufferGoto 8<CR>", options)
 keymap("n", "<Space>9", ":BufferGoto 9<CR>", options)
 
+-- Terminal Spawn
+
 -- --Copilot
 -- vim.cmd([[imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")]])
 -- vim.g.copilot_no_tab_map = true

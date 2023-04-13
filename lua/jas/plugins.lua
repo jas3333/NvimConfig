@@ -115,6 +115,15 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- ToggleTerm
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
+
 	-- Bufferline
 	-- use({
 	-- 	"romgrk/barbar.nvim",
