@@ -23,6 +23,7 @@ mason_lspconfig.setup({
 		"cssls",
 		"tailwindcss",
 		"lua_ls",
+		"clangd",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true,
@@ -33,5 +34,6 @@ mason_null_ls.setup({
 		"prettier",
 		"stylua",
 		"eslint_d",
+		"clangd",
 	},
 })

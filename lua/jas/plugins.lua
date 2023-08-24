@@ -106,6 +106,7 @@ return packer.startup(function(use)
 
 	-- Misc
 	use({ "elkowar/yuck.vim" })
+	use("christoomey/vim-tmux-navigator")
 
 	-- Autopairs
 	use({

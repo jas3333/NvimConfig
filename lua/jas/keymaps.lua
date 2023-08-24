@@ -9,10 +9,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", options)
-keymap("n", "<C-j>", "<C-w>j", options)
-keymap("n", "<C-k>", "<C-w>k", options)
-keymap("n", "<C-l>", "<C-w>l", options)
+-- keymap("n", "<C-h>", "<C-w>h", options)
+-- keymap("n", "<C-j>", "<C-w>j", options)
+-- keymap("n", "<C-k>", "<C-w>k", options)
+-- keymap("n", "<C-l>", "<C-w>l", options)
 
 -- Window Resizing
 keymap("n", "<C-Up>", ":resize +2<CR>", options)
@@ -59,5 +59,8 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", options) -- find string
 -- Comment Box
 keymap("n", "<leader>ac", "<cmd>lua require('comment-box').cbox()<CR>", options)
 keymap("v", "<leader>ac", "<cmd>lua require('comment-box').cbox()<CR>", options)
+
+-- Vsplit
+keymap("n", "<leader>s", ":vsplit<CR>", options)
 
 -- Terminal

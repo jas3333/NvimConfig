@@ -77,7 +77,7 @@ typescript.setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte", "htmldjango" },
 })
 
 -- configure css server
@@ -90,6 +90,19 @@ lspconfig["cssls"].setup({
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities, -- Will allow autocompletion
 	on_attach = on_attach, -- Will attach to the file so we can use keybinds
+})
+
+lspconfig["clangd"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["rust_analyzer"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 -- configure lua server (with special settings)

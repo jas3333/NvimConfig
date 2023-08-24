@@ -15,11 +15,14 @@ null_ls.setup({
 				"--single-quote",
 				"--semi: true",
 				"--jsx-single-quote",
-				"--print-width=120",
+				"--print-width=180",
 			},
 		}),
 		formatting.stylua,
-		formatting.autopep8,
+		-- formatting.autopep8,
+		formatting.rustfmt,
+		formatting.goimports,
+		--formatting.djlint,
 
 		diagnostics.eslint_d.with({
 			condition = function(utils)
